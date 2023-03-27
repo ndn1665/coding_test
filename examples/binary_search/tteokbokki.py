@@ -12,7 +12,7 @@ while(start <= end):
         if i >= mid:
             total += i-mid
     if total < inquire:
-        end = mid -1
+        end = mid - 1
     else:
         result = mid
         start = mid + 1
