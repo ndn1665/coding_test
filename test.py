@@ -1,7 +1,8 @@
-#using pycharm because jupyter notebook is not working well
+array = [()]
+print(array)
+print(array[0])
 
-import sys
-
-input_data = sys.stdin.readline().rstrip()
-
-print(input_data)
+if array:
+    print('1')
+if array[0]:
+    print("2")
