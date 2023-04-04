@@ -12,7 +12,7 @@ def solution(food_times, k):
         i %= length
         if food_times[i]:
             food_times[i] -= 1
-            cnt += 1
+            cnt += 1s
 
         if cnt == k:
             while True:
