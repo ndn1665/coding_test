@@ -2,8 +2,10 @@ map_size = int(input())
 
 gmmap = [[0 for _ in range(map_size)]for _ in range(map_size)]
 gmmap[0][0] = 2#초기 뱀 위치 설정
-gmmap[0][1],gmmap[0][2],gmmap[0][3],gmmap[0][4] =  1,1, 1, 1
-arr = [(0,'r'),(8, 'd'),(10, 'd'),(11, 'd'),(13,'l')]
+#gmmap[0][1],gmmap[0][2],gmmap[0][3],gmmap[0][4] = 1, 1, 1, 1
+gmmap[2][3],gmmap[1][4],gmmap[4][2] = 1, 1, 1
+#arr = [(0,'r'),(8, 'd'),(10, 'd'),(11, 'd'),(13,'l')]
+arr = [(0,'r'),(3, 'd'),(15, 'l'),(17, 'd')]
 
 course = []
 minus = 0
@@ -28,20 +30,20 @@ while True:
         if course[head_count] == dir[i]:
             head_x += dx[i]#head좌표 최신화
             head_y += dy[i]
-            head_count += 1
-    if head_x >=len(gmmap) or head_x <0 or head_y >=len(gmmap) or head_y < 0:
+    head_count += 1
+    if head_x >= len(gmmap) or head_x < 0 or head_y >= len(gmmap) or head_y < 0 or gmmap[head_x][head_y] == 2:
         break
+
     if gmmap[head_x][head_y] == 0:
-        gmmap[head_x][head_y] += 2  # 머리 좌표 게임맵에 반영
+        gmmap[head_x][head_y] = 2  # 머리 좌표 게임맵에 반영
         gmmap[tail_x][tail_y] = 0 #꼬리자르기
         for i in range(4):
             if course[tail_count] == dir[i]:
                 tail_x += dx[i]#tail 좌표 최신화
                 tail_y += dy[i]
-                tail_count +=1
+        tail_count +=1
     elif gmmap[head_x][head_y] == 1:
-        gmmap[head_x][head_y] += 2
-    else:
-        break
+        gmmap[head_x][head_y] = 2
+
 
 print(head_count)
