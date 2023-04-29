@@ -2,7 +2,7 @@ from collections import deque
 
 n,m = map(int, input().split())
 
-graph = [[2,0,1,0,1,0],
+graph = [[1,0,1,0,1,0],
          [1,1,1,1,1,1],
          [0,0,0,0,0,1],
          [1,1,1,1,1,1],
@@ -25,4 +25,4 @@ def bfs(x,y):
                 graph[nx][ny] = graph[a][b] + 1 # 두번째 좌표에 첫번째 좌표의 값에 1을 더하고
                 queue.append((nx,ny)) #두번째 좌표를 queue에 넣어준다
     return graph[n-1][m-1]
-print(bfs(0,0) - 1)
+print(bfs(0,0))
