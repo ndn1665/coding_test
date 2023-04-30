@@ -17,3 +17,7 @@ while(start <= end):
         result = mid
         start = mid + 1
 print(result)
+
+# end = mid - 1 과 start = mid + 1 을 해줘야 한다 왜냐면 while (start <= end)일때 반복하는 반복문에서 end = mid 고 start = mid인
+#상황이 오면 무한루프에 빠진다. 그래서 while (start <= end)루프일때 end = mid - 1 start = mid + 1을 하면 탈출 할 수 있다.그리고 시작값이
+# 예를 들어 mid(14)에서 +1된 15여도 end 가 15까지 접근할 수 있기 때문에, mid가 15가 되는 상황이 안나올것을 걱정하지 않아도 된다.
