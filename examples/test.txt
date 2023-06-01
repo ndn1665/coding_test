@@ -1,1 +1,0 @@
-is it possible to push some txt files from the folder which is not initialize
