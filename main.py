@@ -1,9 +1,5 @@
-def func():
-    a = input()
-    return a
-
-name1 = func()
-name2 = func()
-
-print(name1)
-print(name2)
+while index != 0:
+    for x in range(0,n+1, index//2):
+        for y in range(0,n+1,index//2):
+            pass
+    index = index//2
