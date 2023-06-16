@@ -1,4 +1,22 @@
-    import heapq
+'''
+6 11
+1
+1 2 2
+1 3 5
+1 4 1
+2 3 3
+2 4 2
+3 2 3
+3 6 5
+4 3 3
+4 5 1
+5 3 1
+5 6 2
+
+'''
+#다익스트라 알고리즘은 음수간선을 포함했을때는 정답을 구하지 못한다.https://kangworld.tistory.com/76
+#음수간선을 포함했을때 최단거리는 벨만 포드 알고리즘으로 구할 수 있다.
+import heapq
 import sys
 input = sys.stdin.readline
 INF = int(1e9)
